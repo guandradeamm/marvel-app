@@ -1,0 +1,99 @@
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  background-color: #e23636;
+  padding: 1rem;
+}
+
+header > h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+}
+
+.container {
+  background-color: #252525;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.search-form {
+  width: 90%;
+  height: 30%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #252525;
+}
+
+.form-control {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  width: 100%;
+  height: 40%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  color: #f78f3f;
+  justify-content: center;
+  text-transform: uppercase;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 80%;
+  text-decoration: none;
+  padding: 1rem;
+  margin: auto;
+  border: none;
+  text-align: center;
+  line-height: 1rem;
+  border-radius: 0.5rem;
+  background-color: #504a4a;
+  color: #ffffff;
+}
+input[type="text"]:focus {
+  outline: none;
+  border: #f78f3f 1px solid;
+}
+
+input[type="submit"] {
+  width: 90%;
+  background-color: #e23636;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: auto;
+  border: none;
+  text-align: center;
+  line-height: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #f78f3f;
+  color: #ffffff;
+}
