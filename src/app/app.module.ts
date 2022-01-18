@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchFormComponent],
+  declarations: [AppComponent, SearchFormComponent, HeroesComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

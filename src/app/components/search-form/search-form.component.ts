@@ -17,8 +17,8 @@ export class SearchFormComponent implements OnInit {
       alert('Por favor busque por um personagem.');
       return;
     }
-    this.heroService.getHeroes(this.hero).subscribe((res) => {
-      console.log(res);
+    this.heroService.getPayload(this.hero).subscribe((res) => {
+      this.heroService.registerHeroes(res);
     });
   }
 }
