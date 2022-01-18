@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroService } from '../../services/hero.service';
 
 @Component({
   selector: 'app-search-form',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchFormComponent implements OnInit {
   hero: string = '';
-  constructor() {}
+  constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {}
   public onSubmit() {
@@ -16,5 +17,8 @@ export class SearchFormComponent implements OnInit {
       alert('Por favor busque por um personagem.');
       return;
     }
+    this.heroService.getHeroes(this.hero).subscribe((res) => {
+      console.log(res);
+    });
   }
 }
