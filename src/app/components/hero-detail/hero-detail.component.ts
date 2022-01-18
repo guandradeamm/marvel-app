@@ -34,6 +34,6 @@ export class HeroDetailComponent implements OnInit {
 
   ngOnInit(): void {}
   public getImgUrl(): string {
-    return this.heroService.getImage(ImageNames.large, this.character);
+    return this.heroService.getImage(ImageNames.uncanny, this.character);
   }
 }

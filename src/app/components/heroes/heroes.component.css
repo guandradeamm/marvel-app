@@ -6,9 +6,25 @@
 }
 
 app-hero {
-  width: 40%;
+  width: 80%;
   margin: 1rem;
   display: flex;
   align-items: center;
   justify-items: center;
+}
+
+@media (min-width: 481px) {
+  app-hero {
+    width: 40%;
+  }
+}
+@media (min-width: 769px) {
+  app-hero {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  app-hero {
+    width: 20%;
+  }
 }

@@ -33,7 +33,7 @@ a {
 .character-container {
   width: 80%;
   height: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .head {
@@ -47,6 +47,7 @@ a {
   margin-bottom: 0.9rem;
   box-sizing: border-box;
   border: #518cca 6px solid;
+  width: 40%;
 }
 
 .head > h1 {
@@ -62,6 +63,7 @@ a {
 
 .header {
   font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
 .comics {
@@ -71,4 +73,73 @@ a {
 
 .comics > span {
   font-size: 0.7rem;
+}
+
+@media (min-width: 481px) {
+  .head > h1 {
+    font-size: 3rem;
+  }
+  .head > h3 {
+    font-size: 1rem;
+  }
+  .header {
+    font-size: 1.3rem;
+  }
+  .comics > span {
+    font-size: 1rem;
+  }
+  .head > img {
+    width: 35%;
+  }
+}
+@media (min-width: 769px) {
+  .head > h1 {
+    font-size: 3.5rem;
+  }
+  .head > h3 {
+    font-size: 1.1rem;
+  }
+  .header {
+    font-size: 1.1rem;
+  }
+  .comics > span {
+    font-size: 1rem;
+  }
+  .head > img {
+    width: 25%;
+  }
+}
+@media (min-width: 1024px) {
+  .head > h1 {
+    font-size: 4rem;
+  }
+  .head > h3 {
+    font-size: 1.2rem;
+  }
+  .header {
+    font-size: 1.2rem;
+  }
+  .comics > span {
+    font-size: 1.1rem;
+  }
+  .head > img {
+    width: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .head > h1 {
+    font-size: 4rem;
+  }
+  .head > h3 {
+    font-size: 1.2rem;
+  }
+  .header {
+    font-size: 1.2rem;
+  }
+  .comics > span {
+    font-size: 1rem;
+  }
+  .head > img {
+    width: 15%;
+  }
 }

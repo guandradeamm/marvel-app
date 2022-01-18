@@ -8,7 +8,7 @@
       <img [src]="character?.thumbnail && getImgUrl()" />
       <h3>{{ character?.description }}</h3>
     </div>
-    <h2 class="header">Quadrinhos:</h2>
+    <h2 class="header">quadrinhos:</h2>
     <div class="comics">
       <span class="list" *ngFor="let comic of character?.comics?.items">
         {{ comic?.name }}
