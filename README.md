@@ -1,27 +1,53 @@
-# MarvelApp
+# Marvel App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+## [![Netlify Status](https://api.netlify.com/api/v1/badges/64ff5301-f909-406a-86c4-f025efc2b6d7/deploy-status)](https://app.netlify.com/sites/marvel-characters-challenge/deploys)
 
-## Development server
+![Marvel Logo](./images/logo.svg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> An app aimed at finding your favorite Marvel hero !
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Technologies used:**
 
-## Build
+- Angular.js
+- CSS
+- Typescript
+- Hashing
+- API consunption
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+**Configuration:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. After cloning the respository, install the dependencies:
 
-## Running end-to-end tests
+- using npm:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+npm install
+```
 
-## Further help
+- using yarn:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+yarn
+```
+
+2. To run the application locally you can utilize the start script:
+
+- using npm:
+
+```
+npm run start
+```
+
+- using yarn:
+
+```
+yarn start
+```
+
+**Live Demo:**
+
+You can check a live demo of the app running [here](https://marvelherofinder.netlify.app)
