@@ -1,0 +1,14 @@
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+app-hero {
+  width: 40%;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}

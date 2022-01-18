@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container > a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.2rem #e23636 solid;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  background-color: #e23636;
+  border: 0.2rem #f78f3f solid;
+}
+
+.card > .img-container {
+  height: 55%;
+}
+
+.card > .text-container {
+  margin-top: 0.5rem;
+  height: 45%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card > .text-container > h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}

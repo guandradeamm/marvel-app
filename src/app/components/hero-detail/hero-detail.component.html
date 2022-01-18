@@ -1,0 +1,18 @@
+<div class="character">
+  <div class="character-container">
+    <div class="close">
+      <a [routerLink]="['/']"><fa-icon [icon]="iconClose"></fa-icon></a>
+    </div>
+    <div class="head">
+      <h1>{{ character?.name }}</h1>
+      <img [src]="character?.thumbnail && getImgUrl()" />
+      <h3>{{ character?.description }}</h3>
+    </div>
+    <h2 class="header">Quadrinhos:</h2>
+    <div class="comics">
+      <span class="list" *ngFor="let comic of character?.comics?.items">
+        {{ comic?.name }}
+      </span>
+    </div>
+  </div>
+</div>

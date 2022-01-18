@@ -1,9 +1,10 @@
 import * as md5 from 'md5';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, of } from 'rxjs';
 import { Payload } from '../models/payload';
 import { Hero } from '../models/hero';
+import { ImageNames } from '../models/image-names';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +19,29 @@ export class HeroService {
     const hash = this.getHash(timestamp);
     const url = `${process.env['NG_APP_BASE_URL']}/characters?nameStartsWith=${query}&apikey=${process.env['NG_APP_PUBLIC_KEY']}&ts=${timestamp}&hash=${hash}`;
     return this.http.get<Payload>(url);
+  }
+
+  public getPayloadById(id: number): Observable<Payload> {
+    const timestamp = this.getTimestamp();
+    const hash = this.getHash(timestamp);
+    const url = `${process.env['NG_APP_BASE_URL']}/characters/${id}?apikey=${process.env['NG_APP_PUBLIC_KEY']}&ts=${timestamp}&hash=${hash}`;
+    return this.http.get<Payload>(url);
+  }
+
+  public getHeroById(payload: Payload): Observable<Hero> | null {
+    if (payload.code !== 200) {
+      alert('Nenhuma resposta foi recebida pela API.');
+      return null;
+    }
+    const heroList = payload?.data?.results;
+    if (heroList.length <= 0) {
+      alert('Nenhum Heroi encontrado!');
+      return null;
+    }
+    if (payload?.data?.count === 1) {
+      return of(heroList[0]);
+    }
+    return null;
   }
 
   public registerHeroes(payload: Payload) {
@@ -36,6 +60,11 @@ export class HeroService {
 
   public getHeroes(): Observable<Hero[]> {
     return this.subject.asObservable();
+  }
+
+  public getImage(name: ImageNames, hero: Hero): string {
+    const imgUrl = `${hero.thumbnail.path}/${name}.${hero.thumbnail.extension}`;
+    return imgUrl;
   }
 
   private getTimestamp() {
